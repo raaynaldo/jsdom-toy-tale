@@ -30,8 +30,8 @@ function renderToys(toy) {
   let divToyCollection = document.getElementById("toy-collection");
 
   let card = document.createElement("div");
-  card.classList.add("card");
   card.id = `toy-${toy.id}`;
+  card.classList.add("card");
 
   let title = document.createElement("h2");
   title.innerHTML = toy.name;
@@ -46,9 +46,7 @@ function renderToys(toy) {
   let button = document.createElement("button");
   button.classList = "like-btn";
   button.innerHTML = "Like ♥";
-  button.addEventListener("click", (event) => {
-    likeToy(event);
-  });
+  button.addEventListener("click", updateLike);
 
   card.appendChild(title);
   card.appendChild(img);
@@ -76,31 +74,27 @@ function createToy() {
 
     fetch(URL, Obj)
       .then((res) => res.json())
-      .then((json) => renderToys(json));
+      .then(json => renderToys(json));
   });
 }
 
-function likeToy(event) {
-  let currentLike = parseInt(event.target.previousSibling.innerHTML);
-  // like.innerText = parseInt(like.innerText) + 1
-  
+function updateLike(event) {
+  let id = event.target.parentElement.id.split("-")[1];
+  let likes = event.target.previousSibling.innerHTML;
+  console.log(id, likes);
 
-  let likeData = {
-    likes: currentLike + 1,
+  let data = {
+    likes: parseInt(likes) + 1,
   };
 
-  
-  let likeObj = {};
-  likeObj.method = "PATCH"
-  likeObj.headers = {"Content-Type": "application/json"};
-  likeObj.body = JSON.stringify(likeData);
-  
-  let toyId = event.target.parentNode.id.split("-")[1]
+  let Obj = {};
+  Obj.method = "PATCH";
+  Obj.headers = { "Content-Type": "application/json" };
+  Obj.body = JSON.stringify(data);
 
-  fetch(`http://localhost:3000/toys/${toyId}`, likeObj)
-    .then(resp => resp.json())
-    .then(json => {
+  fetch(`${URL}/${id}`, Obj)
+    .then((res) => res.json())
+    .then((json) => {
       event.target.previousSibling.innerHTML = json.likes
-    })
-  
+    });
 }

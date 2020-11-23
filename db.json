@@ -4,25 +4,27 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 33,
+      "like": 29
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 26,
+      "like": 17
     },
     {
       "id": 3,
       "name": "Mr. Potato Head",
       "image": "https://vignette.wikia.nocookie.net/universe-of-smash-bros-lawl/images/d/d8/Mr-potato-head-toy-story.gif/revision/latest?cb=20151129131217",
-      "likes": 3
+      "likes": 10
     },
     {
       "id": 4,
       "name": "Slinky Dog",
       "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-      "likes": 4
+      "likes": 18
     },
     {
       "id": 5,
@@ -47,6 +49,58 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Barbie",
+      "image": "http://www.pngmart.com/files/13/Toy-Story-Slinky-Dog-PNG-Clipart.png",
+      "id": 9
+    },
+    {
+      "name": "Barbie",
+      "image": "http://www.pngmart.com/files/13/Toy-Story-Slinky-Dog-PNG-Clipart.png",
+      "id": 10
+    },
+    {
+      "name": "Erick",
+      "image": "http://www.pngmart.com/files/13/Toy-Story-Slinky-Dog-PNG-Clipart.png",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "Tekken",
+      "image": "http://www.pngmart.com/files/12/Tekken-Jack-PNG-Transparent-Image.png",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "James",
+      "image": "www.NYTimes.com",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "Tom",
+      "image": "www.facebook.com",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "Erick",
+      "image": "www.NYTimes.com",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "Avataar",
+      "image": "www.mom.com",
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "blues",
+      "image": "http://www.pngmart.com/files/12/Tekken-Jack-PNG-Transparent-Image.png",
+      "likes": 0,
+      "id": 17
     }
   ]
 }
